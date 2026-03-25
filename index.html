@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 摸鱼量化器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .update-date {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlight-box .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box .text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+
+        h2 {
+            color: #ff6b6b;
+            font-size: 20px;
+            margin: 35px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin: 12px 0;
+            color: #555;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .data-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .check-list li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        .cross-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .cross-list li {
+            padding: 10px 0;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .cross-list li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-card.warning {
+            border-left-color: #f39c12;
+            background: #fff9e6;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+        }
+
+        .footer .fish {
+            font-size: 40px;
+            margin-bottom: 15px;
+            animation: swim 2s ease-in-out infinite;
+        }
+
+        @keyframes swim {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(5px) rotate(3deg); }
+            75% { transform: translateX(-5px) rotate(-3deg); }
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .lang-switch {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .lang-switch a {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 0 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-switch a.active {
+            background: linear-gradient(135deg, #ff6b6b 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .lang-switch a:not(.active) {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .lang-switch a:hover:not(.active) {
+            background: #e0e0e0;
+        }
+
+        .section-en {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .data-table {
+                font-size: 14px;
+            }
+
+            .data-table th, .data-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🐟</div>
+            <h1>隐私政策</h1>
+            <p class="subtitle">摸鱼量化器 - 工资实时计算</p>
+            <div class="update-date">最后更新：2026年3月25日</div>
+        </div>
+
+        <div class="lang-switch">
+            <a href="#" class="active" onclick="showLang('zh'); return false;">中文</a>
+            <a href="#" onclick="showLang('en'); return false;">English</a>
+        </div>
+
+        <!-- 中文版本 -->
+        <div class="section-zh">
+            <div class="highlight-box">
+                <div class="icon">🔒</div>
+                <div class="text">我们不收集您的任何数据</div>
+            </div>
+
+            <h2>📋 简介</h2>
+            <p>感谢您使用"摸鱼量化器"Chrome 扩展程序。我们非常重视您的隐私。本隐私政策说明了我们如何处理您的信息。</p>
+
+            <h2>📊 数据收集</h2>
+            <h3>我们收集什么数据？</h3>
+            <p><strong>无。</strong> 本扩展程序不收集、传输或存储任何用户数据到外部服务器。</p>
+
+            <h3>本地存储的数据</h3>
+            <p>本扩展程序仅在您的本地浏览器中存储以下信息：</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>数据类型</th>
+                        <th>用途</th>
+                        <th>存储位置</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>💰 月工资设置</td>
+                        <td>计算日薪和时薪</td>
+                        <td>本地浏览器</td>
+                    </tr>
+                    <tr>
+                        <td>⏰ 工作时间设置</td>
+                        <td>计算工作进度</td>
+                        <td>本地浏览器</td>
+                    </tr>
+                    <tr>
+                        <td>🐟 摸鱼记录</td>
+                        <td>统计摸鱼时长</td>
+                        <td>本地浏览器</td>
+                    </tr>
+                    <tr>
+                        <td>📋 加班记录</td>
+                        <td>统计加班时长</td>
+                        <td>本地浏览器</td>
+                    </tr>
+                    <tr>
+                        <td>🔔 木鱼功德</td>
+                        <td>记录敲击次数</td>
+                        <td>本地浏览器</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-card">
+                <strong>这些数据：</strong>
+                <ul class="check-list">
+                    <li>仅存储在您的设备上</li>
+                    <li>不会发送到任何服务器</li>
+                    <li>不会与任何第三方共享</li>
+                    <li>您可以随时通过卸载扩展程序删除</li>
+                </ul>
+            </div>
+
+            <h2>🌐 数据传输</h2>
+            <p>本扩展程序：</p>
+            <ul class="cross-list">
+                <li>不进行任何网络请求</li>
+                <li>不连接任何外部服务器</li>
+                <li>不使用任何分析或追踪服务</li>
+                <li>不加载任何远程代码</li>
+            </ul>
+
+            <h2>🔐 权限说明</h2>
+            <p>本扩展程序仅请求 <code>storage</code> 权限，用于：</p>
+            <ul class="check-list">
+                <li>在本地浏览器中保存您的设置</li>
+                <li>在本地浏览器中保存您的记录数据</li>
+            </ul>
+
+            <p>我们不请求任何其他权限，包括：</p>
+            <ul class="cross-list">
+                <li>不访问您的浏览历史</li>
+                <li>不读取您访问的网页内容</li>
+                <li>不访问您的个人信息</li>
+            </ul>
+
+            <h2>🔗 第三方服务</h2>
+            <p>本扩展程序不使用任何第三方服务，包括但不限于：</p>
+            <ul class="cross-list">
+                <li>分析服务（如 Google Analytics）</li>
+                <li>广告服务</li>
+                <li>社交媒体集成</li>
+                <li>云存储服务</li>
+            </ul>
+
+            <h2>🛡️ 数据安全</h2>
+            <div class="info-card warning">
+                <p>由于所有数据都存储在您的本地浏览器中，数据安全取决于您设备的安全性。我们建议：</p>
+                <ul class="check-list">
+                    <li>保持您的浏览器和操作系统更新</li>
+                    <li>使用强密码保护您的设备</li>
+                    <li>不在公共设备上使用本扩展程序存储敏感信息</li>
+                </ul>
+            </div>
+
+            <h2>👶 儿童隐私</h2>
+            <p>本扩展程序不针对 13 岁以下的儿童，也不会故意收集儿童的任何信息。</p>
+
+            <h2>📝 隐私政策变更</h2>
+            <p>如果我们对本隐私政策进行任何更改，我们将在此页面上发布更新后的政策，并更新"最后更新日期"。</p>
+
+            <h2>💻 开源声明</h2>
+            <p>本扩展程序的源代码完全开源，您可以在 GitHub 上查看完整代码，验证我们的隐私承诺。</p>
+
+            <div class="contact-box">
+                <h3>📬 联系我们</h3>
+                <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+                <p>GitHub: <a href="https://github.com/yourname/moyu-quantifier/issues" target="_blank">提交 Issue</a></p>
+            </div>
+
+            <h2>✨ 您的权利</h2>
+            <p>您有权：</p>
+            <ul class="check-list">
+                <li>查看存储在本地的所有数据（通过浏览器开发者工具）</li>
+                <li>删除所有数据（通过卸载扩展程序或清除浏览器数据）</li>
+                <li>选择不使用本扩展程序</li>
+            </ul>
+        </div>
+
+        <!-- English Version -->
+        <div class="section-en">
+            <div class="highlight-box">
+                <div class="icon">🔒</div>
+                <div class="text">We do not collect any of your data</div>
+            </div>
+
+            <h2>📋 Introduction</h2>
+            <p>Thank you for using the "Fish Slacking Quantifier" Chrome extension. We take your privacy very seriously. This privacy policy explains how we handle your information.</p>
+
+            <h2>📊 Data Collection</h2>
+            <h3>What data do we collect?</h3>
+            <p><strong>None.</strong> This extension does not collect, transmit, or store any user data to external servers.</p>
+
+            <h3>Locally Stored Data</h3>
+            <p>This extension only stores the following information in your local browser:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Purpose</th>
+                        <th>Storage Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>💰 Monthly Salary</td>
+                        <td>Calculate daily/hourly wage</td>
+                        <td>Local Browser</td>
+                    </tr>
+                    <tr>
+                        <td>⏰ Work Hours</td>
+                        <td>Calculate work progress</td>
+                        <td>Local Browser</td>
+                    </tr>
+                    <tr>
+                        <td>🐟 Slacking Records</td>
+                        <td>Track slacking time</td>
+                        <td>Local Browser</td>
+                    </tr>
+                    <tr>
+                        <td>📋 Overtime Records</td>
+                        <td>Track overtime hours</td>
+                        <td>Local Browser</td>
+                    </tr>
+                    <tr>
+                        <td>🔔 Wooden Fish Merit</td>
+                        <td>Record tap counts</td>
+                        <td>Local Browser</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-card">
+                <strong>This data:</strong>
+                <ul class="check-list">
+                    <li>Is stored only on your device</li>
+                    <li>Is never sent to any server</li>
+                    <li>Is not shared with any third parties</li>
+                    <li>Can be deleted by uninstalling the extension</li>
+                </ul>
+            </div>
+
+            <h2>🌐 Data Transmission</h2>
+            <p>This extension:</p>
+            <ul class="cross-list">
+                <li>Does not make any network requests</li>
+                <li>Does not connect to any external servers</li>
+                <li>Does not use any analytics or tracking services</li>
+                <li>Does not load any remote code</li>
+            </ul>
+
+            <h2>🔐 Permissions</h2>
+            <p>This extension only requests the <code>storage</code> permission to:</p>
+            <ul class="check-list">
+                <li>Save your settings in the local browser</li>
+                <li>Save your records in the local browser</li>
+            </ul>
+
+            <p>We do not request any other permissions, including:</p>
+            <ul class="cross-list">
+                <li>Access to your browsing history</li>
+                <li>Access to webpage content</li>
+                <li>Access to your personal information</li>
+            </ul>
+
+            <h2>🔗 Third-Party Services</h2>
+            <p>This extension does not use any third-party services, including:</p>
+            <ul class="cross-list">
+                <li>Analytics services (e.g., Google Analytics)</li>
+                <li>Advertising services</li>
+                <li>Social media integrations</li>
+                <li>Cloud storage services</li>
+            </ul>
+
+            <h2>🛡️ Data Security</h2>
+            <div class="info-card warning">
+                <p>Since all data is stored in your local browser, data security depends on your device's security. We recommend:</p>
+                <ul class="check-list">
+                    <li>Keep your browser and OS updated</li>
+                    <li>Use strong passwords to protect your device</li>
+                    <li>Avoid storing sensitive information on public devices</li>
+                </ul>
+            </div>
+
+            <h2>👶 Children's Privacy</h2>
+            <p>This extension is not intended for children under 13 and does not knowingly collect any information from children.</p>
+
+            <h2>📝 Policy Changes</h2>
+            <p>If we make any changes to this privacy policy, we will post the updated policy on this page and update the "Last Updated" date.</p>
+
+            <h2>💻 Open Source</h2>
+            <p>This extension's source code is fully open source. You can view the complete code on GitHub to verify our privacy commitments.</p>
+
+            <div class="contact-box">
+                <h3>📬 Contact Us</h3>
+                <p>If you have any questions about this privacy policy, please contact us:</p>
+                <p>GitHub: <a href="https://github.com/yourname/moyu-quantifier/issues" target="_blank">Submit an Issue</a></p>
+            </div>
+
+            <h2>✨ Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul class="check-list">
+                <li>View all locally stored data (via browser developer tools)</li>
+                <li>Delete all data (by uninstalling the extension or clearing browser data)</li>
+                <li>Choose not to use this extension</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <div class="fish">🐟</div>
+            <p>感谢您信任"摸鱼量化器"！</p>
+            <p>Thank you for trusting "Fish Slacking Quantifier"!</p>
+            <p style="margin-top: 15px;">祝您摸鱼愉快 | Happy Slacking! 🎉</p>
+        </div>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            const zhSection = document.querySelector('.section-zh');
+            const enSection = document.querySelector('.section-en');
+            const links = document.querySelectorAll('.lang-switch a');
+            
+            if (lang === 'zh') {
+                zhSection.style.display = 'block';
+                enSection.style.display = 'none';
+                links[0].classList.add('active');
+                links[1].classList.remove('active');
+            } else {
+                zhSection.style.display = 'none';
+                enSection.style.display = 'block';
+                links[0].classList.remove('active');
+                links[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
